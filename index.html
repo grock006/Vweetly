@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Cherry+Swash:400,700' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search for your favorite television show and Vweetly organizes associated tweets into recaps, people and trending topics related to your selected show.">
+
+    <title>Vweetly!  Organized tweets from your favorite television shows.</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/vweetly.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+          <a class="navbar-brand logo-nav" href="index.html">
+
+             <h1><a href="index.html">Vweetly!</a></h1>
+
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html" alt="home">Home</a></li>
+            <li><a href="about.html" alt="about">About</a></li>
+            <li><a href="contact.html" alt="contact">Contact</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10 tv-border">
+
+            <div class="row search">
+              <div class="col-md-1"></div>
+              <div class="col-md-6 col-xs-12">
+                <i class='fa fa-twitter fa-5x'></i>                
+               <h3>Tweets From Your Favorite TV Shows, <span class="yellow">Organized!</span></h3>
+              </div>
+              <div class="col-md-4 col-xs-12">
+               <form class="form-horizontal" role="form" id="new-id">
+                <select class="form-control" id="selector">
+                  <option>   Select Your Show!   </option>
+                  <option>The Walking Dead</option>
+                  <option>Breaking Bad</option>
+                  <option>Game of Thrones</option>
+                  <option>Parks and Recreation</option>
+                  <option>The Voice</option>
+                  <option>NCIS</option>
+                  <option>Homeland</option>
+                  <option>New Girl</option>
+                </select>
+                
+                <!--<div class="form-group">
+                  <input type="text" class="form-control typeahead" placeholder="Enter Your Favorite TV Show!" id="text">
+               </div>-->
+               
+              </form> 
+              </div>
+              <div class="col-md-1">
+              </div>
+            </div>  
+              
+      <!--collapse-->
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10 col-xs-12">    
+
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title" data-toggle="tooltip" data-placement="top" title="Showrunner, Actors, Writers and Crew">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+               <h3>People <i class='fa fa-users'></i></h3>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse">
+            <div class="panel-body">
+
+              <div id="people-timeline" class="tweets"></div>
+
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title" title="Recaps from Entertainment Weekly, Vulture and The Onion AV Club">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                 <h3>Recaps <i class='fa fa-keyboard-o'></i></h3>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+              
+              <a href="https://twitter.com/EW" alt="Entertainment Weekly Recaps" target="blank"><h5><span class="label label-primary"><span class="yellow">@EW</span> Entertainment Weekly</span></h5></a>
+              
+              <div id="recaps-timeline" class="tweets"></div>
+              
+              <a href="https://twitter.com/vulture" alt="New York Magazine Vulture Recaps" target="blank"><h5><span class="label label-primary"><span class="yellow">@Vulture</span> New York Magazine</span></h5></a>
+              <div id="recaps-vulture" class="tweets"></div>
+              
+              <a href="https://twitter.com/TheAVClub" alt="The Onion AV Club Recaps" target="blank"><h5><span class="label label-primary"><span class="yellow">@theAVClub</span> The Onion</span></h5></a>
+              
+              <div id="recaps-avclub" class="tweets"></div>
+            
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title" title="Trending Topics of your TV show">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                 <h3>#Trending <i class='fa fa-retweet'></i></h3>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              <div id="trending-timeline" class="tweets"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </div>
+      <div class="col-md-1"></div>
+
+      </div>
+
+     
+     </div>  
+     <div class="col-md-1"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-5 col-xs-5"></div>
+        <div class="col-md-2 col-xs-2 tv-stand"></div>
+        <div class="col-md-5 col-xs-5"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 col-xs-12 tv-bottom"></div>
+        <div class="col-md-3"></div>
+      </div>
+    
+    </div><!-- /.container -->
+
+    <footer class="footer">
+      <nav class="navbar navbar-inverse navbar-fixed-bottom">
+       <div class="container">
+        <a href="https://twitter.com/Vweetly" alt="twitter" target="_blank"><i class="fa fa-twitter-square fa-3x"></i></a>
+        <a href="#facebook" alt="facebook" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a>
+        <a href="#instagram" alt="instagram" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>
+        <a href="#google" alt="google plus" target="_blank"><i class=" fa fa-google-plus-square fa-3x"></i></a>
+        <a href="https://twitter.com/vweetly" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @vweetly</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <p><a href="#GregRock"><a href="https://generalassemb.ly/" alt="General Assembly Front End Web Development" target="_blank" class="yellow">General Assembly</a> - Front End Web Development &copy; Greg Rock 2013</a></p>
+       </div> 
+      </nav> 
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Make sure to add jQuery - download the most recent version at http://jquery.com/ -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/typeahead.js"></script>
+    <script src="js/typeahead.min.js"></script>
+
+    <script src="js/vweetly.js"></script>
+  </body>
+</html>

@@ -1,0 +1,273 @@
+body {
+	margin-top: 100px; /* adjust this if the height of the menu bar changes */
+}
+
+.nav {
+	margin-top: 15px; /* this is a faux center fix for the nav options - adjust this if you wish to change the logo height or the font of the menu items */
+}
+footer .navbar {
+	border-top: 1px solid #178acc;
+	color: white;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	padding-top: 10px;
+	font-size: 12px;
+	margin-top: 30px;
+}
+footer .navbar-fixed-bottom {
+	position: relative;
+}
+footer .navbar p {
+	text-align: right;
+}
+.navbar{
+	background-image: linear-gradient(#54b4eb, #2fa4e7 60%, #1d9ce5);
+	background-repeat: no-repeat;
+	border-bottom: 1px solid #178acc;
+}
+
+@media(min-width: 300px){
+a{
+	color: white;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	text-decoration: none;
+}
+}
+a:hover{
+	text-decoration: none;
+	color: white;
+}
+.navbar-inverse .navbar-nav li a {
+	color: white;
+	padding: 10px 20px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	margin-bottom: 10px;
+}
+.navbar-inverse .navbar-nav li a:hover{
+	color: #ffffff;
+	background-color: #178acc;
+	border-radius: 15px;
+}
+
+.navbar-inverse .navbar-brand {
+  color: white;
+  padding: 10px 7px;
+}
+h1{
+	font-family: 'Cherry Swash', cursive;
+	font-size: 50px;
+	margin: 0;
+	background-color: none;
+}
+h3{
+	margin-bottom: 0;
+	padding-top: 0;
+	margin-top: 0;
+	color: #178acc;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+h5{
+	color: black;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	font-size: 18px;
+}
+.yellow {
+	color: #ff0;
+}
+.form-control{
+	width: 60%;
+	text-align: center;
+	margin: 10px;
+}
+.search {
+	padding-top: 40px;
+}
+.tv-border {
+	border: 30px solid black;
+	background:#222 -webkit-radial-gradient(20% 80%, 60% 60%, rgba(255,255,255,.15), rgba(255,255,255,0));
+	color: white;
+	border-radius: 15px;
+	padding-bottom: 70px;
+	box-shadow:0px 2px .7px 1px #777, inset 0 -7px rgba(0,0,0,.4);
+	min-height: 550px;
+	max-height: 1500px;
+}
+.tv-stand{
+	background-color: black;
+	padding: 15px;
+	border-right: 4px solid #777;
+}
+.tv-bottom{
+	background-color: black;
+	padding: 15px;
+	border-radius: 5px 5px 0 0;
+	border-right: 4px solid #777;
+}
+img{
+	width: 100%;
+}
+.navbar img{
+	width: 12%;
+	float: left;
+	margin-left: 300px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.contact{
+	padding-top: 100px;
+	text-align: center;
+}
+.image-padding {
+	padding: 0;
+}
+.col-md-4 h3{
+	margin-top: 0;
+}
+.timeline-border{
+	border-left: 1px solid #178acc;
+	border-top: 1px solid #178acc;
+	border-bottom: 1px solid #178acc;
+	border-radius: 5px;
+	padding-bottom: 20px;
+}
+.left-border{
+	border-right: 1px solid #178acc;
+}
+i {
+	padding-right: 20px;
+}
+i:hover {
+	opacity: 0.4;
+}
+.fa-twitter {
+	float: left;
+	color: #178acc;
+	margin-bottom: 10px;
+}
+
+
+/*Javascript Twitter Styling///////////////////////////////////// */
+
+
+ul img {
+	width: 7%;
+	border-radius: 5px;
+}
+
+.tweets h2 {
+  clear:both;
+}
+.tweets {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height:16px;
+  color:#444;
+  margin-left: 10px;
+}
+.timePosted {
+	text-align: right;
+	line-height: 16px;
+	padding-right: 10px;
+}
+
+.tweets ul a, .tweets ul a:visited {
+  color: #178acc;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.tweets ul a:hover {
+  color: white;
+}
+
+.tweets ul li {
+  list-style:none;
+  overflow:hidden;
+  border:1px solid #444;
+  margin:5px;
+  padding:5px;
+  border-radius: 5px;
+}
+
+.tweets ul li:hover {
+  background-image:linear-gradient(#54b4eb, #2fa4e7 60%, #1d9ce5);
+}
+
+.user, .tweet, .timePosted {
+  /*float:left;*/
+}
+
+.user {
+  /*width:25%;*/
+}
+
+.tweet {
+  width:60%;
+  /*padding-right: 10px;*/
+  margin-top: 20px;
+  margin-bottom: 5px;
+  margin-left: 58px;
+}
+
+.timePosted {
+  float: right;
+  font-size: 12px;
+}
+
+.user {
+  clear:left;
+}
+
+.user span span {
+  display:inline;
+  margin-top:0px;
+  font-weight: bolder;
+  font-size: 18px;
+  color: #444;
+  padding-right: 5px;
+  margin-left: 10px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.user img, .user a > span {
+  float:left;
+}
+
+.interact {
+  width:25%;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.tweets .interact a {
+  padding-right: 5px;
+  float:left;
+}
+
+.user a > span {
+  /*margin-left:3px;*/
+}
+
+#linkage {
+  /*position:fixed;
+  top:0px;
+  right:0px;
+  background-color:#3d3d3d;
+  color:#ffffff;
+  text-decoration:none;
+  padding:0px;
+  width:10%;
+  font-family: 'Helvetica Neue';*/
+}
+
+/*PANEL GROUP/////////////////////////////////////////////////////////////*/
+
+.panel-group {
+	padding-top: 20px;
+}
+.panel-heading:hover{
+	background-color:#f0f3fb;
+}
+.panel-body ul {
+	padding-left: 0;
+}
+
